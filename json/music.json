@@ -1,0 +1,25 @@
+
+{
+	"data": [
+		{	"author":"陈奕迅",
+			"music": "chen1",
+			"url":"chen1.mp3"
+		}, {
+			"author":"陈奕迅",
+			"music": "好久不见",
+			"url":"chen2.mp3"
+		}, {
+			"author":"陈奕迅",
+			"music": "富士山下",
+			"url":"chen3.mp3"
+		}, {
+			"author":"陈奕迅",
+			"music": "时光倒流二十年",
+			"url":"chen4.mp3"
+		}, {
+			"author":"Wanted",
+			"music": "I Wanted You",
+			"url":"I Wanted You.mp3"
+		}
+	]
+}

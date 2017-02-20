@@ -1,0 +1,18 @@
+<div class="m-newsTile">
+	<h2>{{title}}</h2>
+</div>
+<div class="m-video">
+	<ul class="m-video-ul">
+		<li ng-repeat="d in videoList">
+			<a href="#/play/{{d.id}}">
+				<div class="imgBox">
+					<img class="img" src="{{d.thumb}}" alt="{{d.title}}"><!--lol-->
+				</div>
+				<p>{{d.title}}</p>
+			</a>
+		</li>
+	</ul>
+	<div class="loadMore">
+		<i class="i" ng-click="ngclick2()"></i>
+	</div>
+</div>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/news_qa.auto.css" />
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="font/font.css">
+	<link rel="stylesheet" href="css/app.css">
+	<script>
+		var deviceWidth=document.documentElement.clientWidth;
+		if(deviceWidth>750){
+			deviceWidth=750;
+		}
+		document.documentElement.style.fontSize=(deviceWidth/7.5)+'px';
+	</script>
+</head>
+<body>
+<!-- header start -->
+<header>
+	<span id="m_back">返回</span>
+	<h2>时讯直击</h2>
+</header>
+<!-- head end -->
+<!--<nav class="m-nav">
+	<ul>
+		<li><a href="#/main">首页s</a></li>
+		<li><a href="#/js">贵金属</a></li>
+		<li><a href="#/bx">保险</a></li>
+		<li><a href="#/sy">石油s</a></li>
+		<li><a href="#/wh">外汇</a></li>
+	</ul>
+</nav>-->
+
+<div ng-view>
+	
+</div>
+<!--<div>
+	<div class="m-list">
+		<div class="listBox" >
+			<a href="#/article/{{d.id}}">
+				<div class="listImg">
+					<img class="img" src="" alt="{{d.images}}">
+				</div>
+				<div class="list">
+					<p> <strong>sdasdasd</strong><b>2017/10/10</b>
+					</p>
+					<p>
+						<span>asdasdasdasd</span>
+					</p>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>-->
+<!-- footer start -->
+<footer>
+	<nav class="m-foterList">
+		<ul>
+			<li><a href="#/main">
+			<p><i  class="iconfont icon-zhuye"></i></p>热闻</a></li>
+			<li><a href="#/vlist"><p><i  class="iconfont icon-fazhaopian"></i></p>视频</a></li>
+			<li><a href="#/music"><p><i  class="iconfont icon-xiaoxi"></i></p>音乐</a></li>
+			<li><a href="#/tianqi"><p><i  class="iconfont icon-remai"></i></p>天气</a></li>
+		</ul>
+	</nav>
+</footer>
+<!-- footer end -->
+<!-- js -->
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/zepto.js"></script>
+	<script src="js/touch.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.min.js"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=83E4862c1e77e7b01856563eb22e334b"></script>
+	<script type="text/javascript" src="ckplayer/ckplayer.js" charset="utf-8"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script>
+		$('#m_back').on('click Tag',function(){
+			window.history.back();
+			console.log(window.history.back())
+		})
+	</script>
+</body>
+</html>

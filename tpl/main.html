@@ -1,0 +1,81 @@
+<div ng-controller="mainCtr" class="content" id="content">
+	<!-- banner start -->
+	<div class="m-banner">
+		<div class="m-bannerimg">
+			<img class="img" src="images/banner1.gif" alt="">
+			<img class="img" src="images/banner2.jpg" alt="">
+			<img class="img" src="images/banner3.jpg" alt="">
+		</div>		
+	</div>
+	<!--banner end -->
+	<!-- list -->
+	<div class="m-newsTile">
+		<h2>最新资讯</h2>
+	</div>
+	<div class="m-list" id="main_index">
+		<div class="listBox" ng-repeat="d in data">
+			<a href="#/article/{{d.id}}">
+				<div class="listImg">
+					<img class="img" src="{{d.images[0]}}" alt="{{d.images}}">
+				</div>
+				<div class="list">
+					<p> <strong>{{d.title}}</strong><b>{{ri|limitTo:4}}/{{ri|limitTo:-4|limitTo:2}}/{{ri|limitTo:-2}}/{{d.ga_prefix|limitTo:-2}}点</b>
+					</p>
+				</div>
+			</a>
+		</div>
+	</div>
+	<p class="more" ng-click="ngclick()">加载更多...</p>
+</div>
+<script>
+$(function(){
+	banner('.m-bannerimg');
+	function banner(idd){
+		var i=0;
+		var t;
+		var _this=this;
+		$(idd).on({
+			swipeLeft:function(){
+				var _this=this;
+				move('left',_this);
+			},
+			swipeRight:function(){
+				var _this=this;
+				move('right',_this);
+				
+			}
+		})
+		t=setInterval(function(){
+			move('left',idd);
+		}, 3000)
+		function move(flag,_this){
+			if(flag=='left'){
+				clearInterval(t)
+				i++;
+				if(i>$(_this).find('img').length-1){
+					i=0;
+				}
+				$(_this).css({left:-100*i+'%'});
+				t=setInterval(function(){
+					move('left',_this);
+				}, 3000)
+			}
+			if(flag=='right'){
+				clearInterval(t);
+				i--;
+				if(i<0){
+					i=$(_this).find('img').length-1;
+				}
+				$(_this).css({left:-100*i+'%'});
+				t=setInterval(function(){
+					move('left',_this);
+				}, 3000)
+			}
+		}
+	}
+//	angular.element(window).on('scroll',function(){
+//		console.log(1)
+//	});
+	
+})
+</script>

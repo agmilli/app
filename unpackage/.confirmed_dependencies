@@ -1,0 +1,19 @@
+{
+  "index.html": {
+    "resources": [
+      "js/app.js",
+      "font/font.css",
+      "font/iconfont.woff",
+      "css/app.css",
+      "js/angular-route.min.js",
+      "js/angular.min.js",
+      "css/reset.css",
+      "js/jquery-2.1.4.min.js",
+      "js/touch.js",
+      "js/zepto.js",
+      "css/news_qa.auto.css",
+      "js/ckplayer.js",
+      "ckplayer/ckplayer.js"
+    ]
+  }
+}
